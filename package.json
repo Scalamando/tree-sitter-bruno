@@ -1,7 +1,7 @@
 {
   "name": "tree-sitter-bruno",
   "version": "0.1.0",
-  "description": "Tree-sitter parser for the bruno dsl.",
+  "description": "Bruno grammar for tree-sitter",
   "main": "bindings/node",
   "scripts": {
     "generate": "tree-sitter generate",
@@ -14,9 +14,9 @@
     "url": "git+https://github.com/Scalamando/tree-sitter-bruno.git"
   },
   "keywords": [
+		"bruno",
     "tree-sitter",
-    "parse",
-    "bruno"
+    "parser"
   ],
   "author": "Raimund Canzler <git@rai-canzler.de>",
   "license": "MIT",
