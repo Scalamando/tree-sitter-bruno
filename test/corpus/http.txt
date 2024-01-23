@@ -1,0 +1,28 @@
+==========
+Get Block
+==========
+
+get {
+	url: https://github.com/Scalamando/tree-sitter-bruno
+	body: JSON
+}
+
+---
+
+(source_file
+	(http
+		(http_verb)
+		(dictionary
+			(dictionary_pair
+				(key)
+				(operator)
+				(value)
+			)
+			(dictionary_pair
+				(key)
+				(operator)
+				(value)
+			)
+		)
+	)
+)

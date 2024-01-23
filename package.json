@@ -1,0 +1,54 @@
+{
+  "name": "tree-sitter-bruno",
+  "version": "0.1.0",
+  "description": "Tree-sitter parser for the bruno dsl.",
+  "main": "bindings/node",
+  "scripts": {
+    "generate": "tree-sitter generate",
+    "parse": "tree-sitter parse",
+    "test": "tree-sitter test",
+    "highlight": "tree-sitter highlight"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Scalamando/tree-sitter-bruno.git"
+  },
+  "keywords": [
+    "tree-sitter",
+    "parse",
+    "bruno"
+  ],
+  "author": "Raimund Canzler <git@rai-canzler.de>",
+  "license": "MIT",
+  "files": [
+    "/bindings/node/",
+    "/binding.gyp",
+    "/grammar.js",
+    "/queries/",
+    "/src/"
+  ],
+  "tree-sitter": [
+    {
+      "scope": "source.bruno",
+      "file-types": [
+        "bru"
+      ],
+      "highlights": [
+        "queries/highlights.scm"
+      ],
+      "injections": [
+        "queries/injections.scm"
+      ]
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/Scalamando/tree-sitter-bruno/issues"
+  },
+  "homepage": "https://github.com/Scalamando/tree-sitter-bruno#readme",
+  "dependencies": {
+    "nan": "^2.18.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.8"
+  }
+}

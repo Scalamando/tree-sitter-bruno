@@ -1,0 +1,29 @@
+==========
+JSON Body
+==========
+
+body:json {
+  {
+    "apiKey": "secret",
+    "numbers": "9988776655",
+    "message": "Woof! lets play with some apis"
+  }
+}
+
+---
+
+(source_file
+	(bodies
+		(bodyjson
+      (keyword)
+      (textblock
+        (rawtext
+          (textline)
+          (textline)
+          (textline)
+          (textline)
+				)
+      )
+		)
+	)
+)
