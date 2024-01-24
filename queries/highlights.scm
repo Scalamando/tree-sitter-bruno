@@ -1,7 +1,4 @@
-[
- (keyword)
- (http_verb)
-] @keyword
+(keyword) @keyword
 
 [
 	"{"

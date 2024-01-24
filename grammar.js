@@ -27,7 +27,10 @@ module.exports = grammar({
 			$.dictionary
 		),
 
-    http: $ => seq($.http_verb, $.dictionary),
+    http: $ => seq(
+			alias($.http_verb, $.keyword),
+			$.dictionary
+		),
     http_verb: _ => choice(
       "get",
       "post",
