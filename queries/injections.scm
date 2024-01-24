@@ -51,3 +51,10 @@
 	(textblock
 		(rawtext) @injection.content))
  	(#set! injection.language "javascript"))
+
+((docs
+	(keyword)
+	(textblock
+		(rawtext) @injection.content))
+ 	(#set! injection.language "markdown"))
+
