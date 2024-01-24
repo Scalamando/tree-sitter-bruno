@@ -163,9 +163,8 @@ module.exports = grammar({
       seq(alias("tests", $.keyword), $.textblock),
     docs: $ =>
       seq(alias("docs", $.keyword), $.textblock),
-    textblock: $ => seq("{", optional($.rawtext), "}"),
-    rawtext: $ => repeat1($.textline),
-    textline: _ => /\r?\n[^}].*/,
+    textblock: $ =>
+      seq("{", optional($.rawtext), "}"),
     dictionary: $ =>
       seq("{", repeat($.dictionary_pair), "}"),
     dictionary_pair: $ =>
