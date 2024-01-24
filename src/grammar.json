@@ -71,8 +71,13 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "http_verb"
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "http_verb"
+          },
+          "named": true,
+          "value": "keyword"
         },
         {
           "type": "SYMBOL",
@@ -756,8 +761,8 @@
           "name": "key"
         },
         {
-          "type": "SYMBOL",
-          "name": "operator"
+          "type": "STRING",
+          "value": ":"
         },
         {
           "type": "SYMBOL",
@@ -793,8 +798,8 @@
           "name": "assert_key"
         },
         {
-          "type": "SYMBOL",
-          "name": "operator"
+          "type": "STRING",
+          "value": ":"
         },
         {
           "type": "SYMBOL",
@@ -809,10 +814,6 @@
     "key": {
       "type": "PATTERN",
       "value": "[^\\s\\r\\n:]+"
-    },
-    "operator": {
-      "type": "STRING",
-      "value": ":"
     },
     "value": {
       "type": "PATTERN",

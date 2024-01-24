@@ -61,10 +61,6 @@
           "named": true
         },
         {
-          "type": "operator",
-          "named": true
-        },
-        {
           "type": "value",
           "named": true
         }
@@ -435,10 +431,6 @@
           "named": true
         },
         {
-          "type": "operator",
-          "named": true
-        },
-        {
           "type": "value",
           "named": true
         }
@@ -496,14 +488,14 @@
           "named": true
         },
         {
-          "type": "http_verb",
+          "type": "keyword",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "http_verb",
+    "type": "keyword",
     "named": true,
     "fields": {}
   },
@@ -799,6 +791,10 @@
     "named": false
   },
   {
+    "type": ":",
+    "named": false
+  },
+  {
     "type": "[",
     "named": false
   },
@@ -832,14 +828,6 @@
   },
   {
     "type": "key",
-    "named": true
-  },
-  {
-    "type": "keyword",
-    "named": true
-  },
-  {
-    "type": "operator",
     "named": true
   },
   {

@@ -57,9 +57,9 @@ enum {
   anon_sym_COMMA = 38,
   anon_sym_RBRACK = 39,
   sym_array_value = 40,
-  sym_assert_key = 41,
-  sym_key = 42,
-  sym_operator = 43,
+  anon_sym_COLON = 41,
+  sym_assert_key = 42,
+  sym_key = 43,
   sym_value = 44,
   sym_rawtext = 45,
   sym_source_file = 46,
@@ -149,15 +149,15 @@ static const char * const ts_symbol_names[] = {
   [anon_sym_COMMA] = ",",
   [anon_sym_RBRACK] = "]",
   [sym_array_value] = "array_value",
+  [anon_sym_COLON] = ":",
   [sym_assert_key] = "assert_key",
   [sym_key] = "key",
-  [sym_operator] = "operator",
   [sym_value] = "value",
   [sym_rawtext] = "rawtext",
   [sym_source_file] = "source_file",
   [sym_meta] = "meta",
   [sym_http] = "http",
-  [sym_http_verb] = "http_verb",
+  [sym_http_verb] = "keyword",
   [sym_query] = "query",
   [sym_headers] = "headers",
   [sym_auths] = "auths",
@@ -241,15 +241,15 @@ static const TSSymbol ts_symbol_map[] = {
   [anon_sym_COMMA] = anon_sym_COMMA,
   [anon_sym_RBRACK] = anon_sym_RBRACK,
   [sym_array_value] = sym_array_value,
+  [anon_sym_COLON] = anon_sym_COLON,
   [sym_assert_key] = sym_assert_key,
   [sym_key] = sym_key,
-  [sym_operator] = sym_operator,
   [sym_value] = sym_value,
   [sym_rawtext] = sym_rawtext,
   [sym_source_file] = sym_source_file,
   [sym_meta] = sym_meta,
   [sym_http] = sym_http,
-  [sym_http_verb] = sym_http_verb,
+  [sym_http_verb] = anon_sym_meta,
   [sym_query] = sym_query,
   [sym_headers] = sym_headers,
   [sym_auths] = sym_auths,
@@ -456,15 +456,15 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = true,
   },
+  [anon_sym_COLON] = {
+    .visible = true,
+    .named = false,
+  },
   [sym_assert_key] = {
     .visible = true,
     .named = true,
   },
   [sym_key] = {
-    .visible = true,
-    .named = true,
-  },
-  [sym_operator] = {
     .visible = true,
     .named = true,
   },
@@ -760,7 +760,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '\n') SKIP(0)
       if (lookahead == '\r') SKIP(0)
       if (lookahead == ',') ADVANCE(230);
-      if (lookahead == ':') ADVANCE(236);
+      if (lookahead == ':') ADVANCE(233);
       if (lookahead == '[') ADVANCE(229);
       if (lookahead == ']') ADVANCE(231);
       if (lookahead == 'a') ADVANCE(136);
@@ -786,9 +786,9 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '\r') SKIP(1)
       if (lookahead == '}') ADVANCE(228);
       if (lookahead == '\t' ||
-          lookahead == ' ') ADVANCE(233);
+          lookahead == ' ') ADVANCE(234);
       if (lookahead != 0 &&
-          lookahead != ':') ADVANCE(234);
+          lookahead != ':') ADVANCE(235);
       END_STATE();
     case 2:
       if (lookahead == '\n') SKIP(2)
@@ -797,7 +797,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '\t' ||
           lookahead == ' ') SKIP(2)
       if (lookahead != 0 &&
-          lookahead != ':') ADVANCE(235);
+          lookahead != ':') ADVANCE(236);
       END_STATE();
     case 3:
       if (lookahead == '\n') SKIP(3)
@@ -1510,14 +1510,14 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
           lookahead != '\n' &&
           lookahead != '\r' &&
           lookahead != ' ' &&
-          lookahead != ':') ADVANCE(235);
+          lookahead != ':') ADVANCE(236);
       END_STATE();
     case 228:
       ACCEPT_TOKEN(anon_sym_RBRACE);
       if (lookahead != 0 &&
           lookahead != '\n' &&
           lookahead != '\r' &&
-          lookahead != ':') ADVANCE(234);
+          lookahead != ':') ADVANCE(235);
       END_STATE();
     case 229:
       ACCEPT_TOKEN(anon_sym_LBRACK);
@@ -1540,33 +1540,33 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
           lookahead != ']') ADVANCE(232);
       END_STATE();
     case 233:
-      ACCEPT_TOKEN(sym_assert_key);
-      if (lookahead == '}') ADVANCE(228);
-      if (lookahead == '\t' ||
-          lookahead == ' ') ADVANCE(233);
-      if (lookahead != 0 &&
-          lookahead != '\n' &&
-          lookahead != '\r' &&
-          lookahead != ':') ADVANCE(234);
+      ACCEPT_TOKEN(anon_sym_COLON);
       END_STATE();
     case 234:
       ACCEPT_TOKEN(sym_assert_key);
+      if (lookahead == '}') ADVANCE(228);
+      if (lookahead == '\t' ||
+          lookahead == ' ') ADVANCE(234);
       if (lookahead != 0 &&
           lookahead != '\n' &&
           lookahead != '\r' &&
-          lookahead != ':') ADVANCE(234);
+          lookahead != ':') ADVANCE(235);
       END_STATE();
     case 235:
+      ACCEPT_TOKEN(sym_assert_key);
+      if (lookahead != 0 &&
+          lookahead != '\n' &&
+          lookahead != '\r' &&
+          lookahead != ':') ADVANCE(235);
+      END_STATE();
+    case 236:
       ACCEPT_TOKEN(sym_key);
       if (lookahead != 0 &&
           lookahead != '\t' &&
           lookahead != '\n' &&
           lookahead != '\r' &&
           lookahead != ' ' &&
-          lookahead != ':') ADVANCE(235);
-      END_STATE();
-    case 236:
-      ACCEPT_TOKEN(sym_operator);
+          lookahead != ':') ADVANCE(236);
       END_STATE();
     case 237:
       ACCEPT_TOKEN(sym_value);
@@ -1730,7 +1730,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_LBRACK] = ACTIONS(1),
     [anon_sym_COMMA] = ACTIONS(1),
     [anon_sym_RBRACK] = ACTIONS(1),
-    [sym_operator] = ACTIONS(1),
+    [anon_sym_COLON] = ACTIONS(1),
     [sym_rawtext] = ACTIONS(1),
   },
   [1] = {
@@ -3656,7 +3656,7 @@ static const uint16_t ts_small_parse_table[] = {
       sym_value,
   [1872] = 1,
     ACTIONS(355), 1,
-      sym_operator,
+      anon_sym_COLON,
   [1876] = 1,
     ACTIONS(357), 1,
       sym_value,
@@ -3671,7 +3671,7 @@ static const uint16_t ts_small_parse_table[] = {
       ts_builtin_sym_end,
   [1892] = 1,
     ACTIONS(365), 1,
-      sym_operator,
+      anon_sym_COLON,
 };
 
 static const uint32_t ts_small_parse_table_map[] = {

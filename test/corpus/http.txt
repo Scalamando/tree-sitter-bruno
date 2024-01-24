@@ -11,16 +11,14 @@ get {
 
 (source_file
 	(http
-		(http_verb)
+		(keyword)
 		(dictionary
 			(dictionary_pair
 				(key)
-				(operator)
 				(value)
 			)
 			(dictionary_pair
 				(key)
-				(operator)
 				(value)
 			)
 		)

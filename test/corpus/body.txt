@@ -139,17 +139,14 @@ body:form-urlencoded {
 				(dictionary
 					(dictionary_pair
 						(key)
-						(operator)
 						(value)
 					)
 					(dictionary_pair
 						(key)
-						(operator)
 						(value)
 					)
 					(dictionary_pair
 						(key)
-						(operator)
 						(value)
 					)
 				)
@@ -178,17 +175,14 @@ body:multipart-form {
 				(dictionary
 					(dictionary_pair
 						(key)
-						(operator)
 						(value)
 					)
 					(dictionary_pair
 						(key)
-						(operator)
 						(value)
 					)
 					(dictionary_pair
 						(key)
-						(operator)
 						(value)
 					)
 				)
