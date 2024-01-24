@@ -4,6 +4,7 @@
 module.exports = grammar({
   name: "bruno",
   extras: _ => [/\s+|(\r?\n)/],
+  externals: $ => [$.rawtext],
   rules: {
     source_file: $ =>
       repeat(
