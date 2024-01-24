@@ -1,8 +1,6 @@
 [
  (keyword)
  (http_verb)
- (bodies)
- (varsandassert)
 ] @keyword
 
 [
