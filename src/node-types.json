@@ -222,6 +222,25 @@
     }
   },
   {
+    "type": "bodyformmultipart",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "bodyforms",
     "named": true,
     "fields": {},
@@ -230,11 +249,11 @@
       "required": true,
       "types": [
         {
-          "type": "bodyformurlencoded",
+          "type": "bodyformmultipart",
           "named": true
         },
         {
-          "type": "bodymultipart",
+          "type": "bodyformurlencoded",
           "named": true
         }
       ]
@@ -311,25 +330,6 @@
         },
         {
           "type": "textblock",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "bodymultipart",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "dictionary",
-          "named": true
-        },
-        {
-          "type": "keyword",
           "named": true
         }
       ]
@@ -531,21 +531,6 @@
     }
   },
   {
-    "type": "rawtext",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "textline",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "script",
     "named": true,
     "fields": {},
@@ -605,107 +590,52 @@
   {
     "type": "source_file",
     "named": true,
-    "fields": {
-      "auths": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "auths",
-            "named": true
-          }
-        ]
-      },
-      "bodies": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "bodies",
-            "named": true
-          }
-        ]
-      },
-      "docs": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "docs",
-            "named": true
-          }
-        ]
-      },
-      "headers": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "headers",
-            "named": true
-          }
-        ]
-      },
-      "http": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "http",
-            "named": true
-          }
-        ]
-      },
-      "meta": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "meta",
-            "named": true
-          }
-        ]
-      },
-      "query": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "query",
-            "named": true
-          }
-        ]
-      },
-      "script": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "script",
-            "named": true
-          }
-        ]
-      },
-      "tests": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "tests",
-            "named": true
-          }
-        ]
-      },
-      "varsandassert": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "varsandassert",
-            "named": true
-          }
-        ]
-      }
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "auths",
+          "named": true
+        },
+        {
+          "type": "bodies",
+          "named": true
+        },
+        {
+          "type": "docs",
+          "named": true
+        },
+        {
+          "type": "headers",
+          "named": true
+        },
+        {
+          "type": "http",
+          "named": true
+        },
+        {
+          "type": "meta",
+          "named": true
+        },
+        {
+          "type": "query",
+          "named": true
+        },
+        {
+          "type": "script",
+          "named": true
+        },
+        {
+          "type": "tests",
+          "named": true
+        },
+        {
+          "type": "varsandassert",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -852,7 +782,7 @@
     "named": false
   },
   {
-    "type": "textline",
+    "type": "rawtext",
     "named": true
   },
   {

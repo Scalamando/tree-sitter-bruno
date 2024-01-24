@@ -7,84 +7,44 @@
         "type": "CHOICE",
         "members": [
           {
-            "type": "FIELD",
-            "name": "meta",
-            "content": {
-              "type": "SYMBOL",
-              "name": "meta"
-            }
+            "type": "SYMBOL",
+            "name": "meta"
           },
           {
-            "type": "FIELD",
-            "name": "http",
-            "content": {
-              "type": "SYMBOL",
-              "name": "http"
-            }
+            "type": "SYMBOL",
+            "name": "http"
           },
           {
-            "type": "FIELD",
-            "name": "query",
-            "content": {
-              "type": "SYMBOL",
-              "name": "query"
-            }
+            "type": "SYMBOL",
+            "name": "query"
           },
           {
-            "type": "FIELD",
-            "name": "headers",
-            "content": {
-              "type": "SYMBOL",
-              "name": "headers"
-            }
+            "type": "SYMBOL",
+            "name": "headers"
           },
           {
-            "type": "FIELD",
-            "name": "auths",
-            "content": {
-              "type": "SYMBOL",
-              "name": "auths"
-            }
+            "type": "SYMBOL",
+            "name": "auths"
           },
           {
-            "type": "FIELD",
-            "name": "bodies",
-            "content": {
-              "type": "SYMBOL",
-              "name": "bodies"
-            }
+            "type": "SYMBOL",
+            "name": "bodies"
           },
           {
-            "type": "FIELD",
-            "name": "varsandassert",
-            "content": {
-              "type": "SYMBOL",
-              "name": "varsandassert"
-            }
+            "type": "SYMBOL",
+            "name": "varsandassert"
           },
           {
-            "type": "FIELD",
-            "name": "script",
-            "content": {
-              "type": "SYMBOL",
-              "name": "script"
-            }
+            "type": "SYMBOL",
+            "name": "script"
           },
           {
-            "type": "FIELD",
-            "name": "tests",
-            "content": {
-              "type": "SYMBOL",
-              "name": "tests"
-            }
+            "type": "SYMBOL",
+            "name": "tests"
           },
           {
-            "type": "FIELD",
-            "name": "docs",
-            "content": {
-              "type": "SYMBOL",
-              "name": "docs"
-            }
+            "type": "SYMBOL",
+            "name": "docs"
           }
         ]
       }
@@ -336,7 +296,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "bodymultipart"
+          "name": "bodyformmultipart"
         }
       ]
     },
@@ -455,7 +415,7 @@
           "type": "ALIAS",
           "content": {
             "type": "STRING",
-            "value": "body:graphqlvars"
+            "value": "body:graphql:vars"
           },
           "named": true,
           "value": "keyword"
@@ -484,7 +444,7 @@
         }
       ]
     },
-    "bodymultipart": {
+    "bodyformmultipart": {
       "type": "SEQ",
       "members": [
         {
@@ -683,17 +643,6 @@
         }
       ]
     },
-    "rawtext": {
-      "type": "REPEAT1",
-      "content": {
-        "type": "SYMBOL",
-        "name": "textline"
-      }
-    },
-    "textline": {
-      "type": "PATTERN",
-      "value": "\\r?\\n[^}].*"
-    },
     "dictionary": {
       "type": "SEQ",
       "members": [
@@ -793,7 +742,12 @@
   ],
   "conflicts": [],
   "precedences": [],
-  "externals": [],
+  "externals": [
+    {
+      "type": "SYMBOL",
+      "name": "rawtext"
+    }
+  ],
   "inline": [],
   "supertypes": []
 }
