@@ -16,6 +16,12 @@
 		(rawtext) @injection.content))
  	(#set! injection.language "xml"))
 
+((bodysparql
+	(keyword)
+	(textblock
+		(rawtext) @injection.content))
+ 	(#set! injection.language "sparql"))
+
 ((bodygraphql
 	(keyword)
 	(textblock
