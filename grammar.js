@@ -118,7 +118,7 @@ module.exports = grammar({
       ),
     bodygraphqlvars: $ =>
       seq(
-        alias("body:graphqlvars", $.keyword),
+        alias("body:graphql:vars", $.keyword),
         $.textblock,
       ),
     bodyformurlencoded: $ =>
