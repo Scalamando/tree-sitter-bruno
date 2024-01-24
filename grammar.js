@@ -87,7 +87,7 @@ module.exports = grammar({
     bodyforms: $ =>
       choice(
         $.bodyformurlencoded,
-        $.bodymultipart,
+        $.bodyformmultipart,
       ),
     body: $ =>
       seq(alias("body", $.keyword), $.textblock),
@@ -126,7 +126,7 @@ module.exports = grammar({
         alias("body:form-urlencoded", $.keyword),
         $.dictionary,
       ),
-    bodymultipart: $ =>
+    bodyformmultipart: $ =>
       seq(
         alias("body:multipart-form", $.keyword),
         $.dictionary,
