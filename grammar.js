@@ -216,6 +216,6 @@ module.exports = grammar({
     assert_key: _ => /[^\r\n:]+/,
 
     key: _ => /[^\s\r\n:]+/,
-    value: _ => /[^\s]+/,
+    value: _ => /[^\r\n]+/,
   },
 });
