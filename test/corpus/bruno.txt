@@ -1,0 +1,31 @@
+================
+META Tag
+================
+
+meta {
+  name: Get users
+  type: http
+  seq: 1
+}
+
+---
+
+(source_file
+	tag: (meta
+		(keyword)
+		(dictionary
+			(dictionary_pair
+				(key)
+				(value)
+			)
+			(dictionary_pair
+				(key)
+				(value)
+			)
+			(dictionary_pair
+				(key)
+				(value)
+			)
+		)
+	)
+)

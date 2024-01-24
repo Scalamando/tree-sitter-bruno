@@ -1,0 +1,239 @@
+=====================
+Query Parameters Tag
+=====================
+
+query {
+  apiKey: secret
+  numbers: 9988776655
+  message: hello
+}
+
+---
+
+(source_file
+	tag: (query
+		(keyword)
+		(dictionary
+			(dictionary_pair
+				(key)
+				(value)
+			)
+			(dictionary_pair
+				(key)
+				(value)
+			)
+			(dictionary_pair
+				(key)
+				(value)
+			)
+		)
+	)
+)
+
+============
+Headers Tag
+============
+
+headers {
+  content-type: application/json
+  Authorization: Bearer topsecret
+}
+
+---
+
+(source_file
+	tag: (headers
+		(keyword)
+		(dictionary
+			(dictionary_pair
+				(key)
+				(value)
+			)
+			(dictionary_pair
+				(key)
+				(value)
+			)
+		)
+	)
+)
+
+===============
+GET Method Tag
+===============
+
+get {
+	url: https://github.com/Scalamando/tree-sitter-bruno
+	body: JSON
+}
+
+---
+
+(source_file
+	tag: (http
+		(keyword)
+		(dictionary
+			(dictionary_pair
+				(key)
+				(value)
+			)
+			(dictionary_pair
+				(key)
+				(value)
+			)
+		)
+	)
+)
+
+================
+POST Method Tag
+================
+
+post {
+  url: https://api.github.com/users/usebruno
+}
+
+---
+
+(source_file
+	tag: (http
+		(keyword)
+		(dictionary
+			(dictionary_pair
+				(key)
+				(value)
+			)
+		)
+	)
+)
+
+===============
+PUT Method Tag
+===============
+
+put {
+  url: https://api.github.com/users/usebruno
+}
+
+---
+
+(source_file
+	tag: (http
+		(keyword)
+		(dictionary
+			(dictionary_pair
+				(key)
+				(value)
+			)
+		)
+	)
+)
+
+==================
+DELETE Method Tag
+==================
+
+delete {
+  url: https://api.github.com/users/usebruno
+}
+
+---
+
+(source_file
+	tag: (http
+		(keyword)
+		(dictionary
+			(dictionary_pair
+				(key)
+				(value)
+			)
+		)
+	)
+)
+
+===================
+OPTIONS Method Tag
+===================
+
+options {
+  url: https://api.github.com/users/usebruno
+}
+
+---
+
+(source_file
+	tag: (http
+		(keyword)
+		(dictionary
+			(dictionary_pair
+				(key)
+				(value)
+			)
+		)
+	)
+)
+
+=================
+TRACE Method Tag
+=================
+
+trace {
+  url: https://api.github.com/users/usebruno
+}
+
+---
+
+(source_file
+	tag: (http
+		(keyword)
+		(dictionary
+			(dictionary_pair
+				(key)
+				(value)
+			)
+		)
+	)
+)
+
+===================
+CONNECT Method Tag
+===================
+
+connect {
+  url: https://api.github.com/users/usebruno
+}
+
+---
+
+(source_file
+	tag: (http
+		(keyword)
+		(dictionary
+			(dictionary_pair
+				(key)
+				(value)
+			)
+		)
+	)
+)
+
+================
+HEAD Method Tag
+================
+
+head {
+  url: https://api.github.com/users/usebruno
+}
+
+---
+
+(source_file
+	tag: (http
+		(keyword)
+		(dictionary
+			(dictionary_pair
+				(key)
+				(value)
+			)
+		)
+	)
+)

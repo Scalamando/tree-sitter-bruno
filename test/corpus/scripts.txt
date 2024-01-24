@@ -1,0 +1,61 @@
+========================
+Script Pre-Request Tags
+========================
+
+script:pre-request {
+  req.setHeader("Authorization", "{{token}}");
+}
+
+---
+
+(source_file
+	tag: (script
+		(scriptreq
+			(keyword)
+  	  (textblock
+  	    (rawtext)
+  	  )
+		)
+	)
+)
+
+========================
+Script Post-Response Tags
+========================
+
+script:post-response {
+  bru.setVar("token", res.body.token);
+}
+
+---
+
+(source_file
+	tag: (script
+		(scriptres
+			(keyword)
+  	  (textblock
+  	    (rawtext)
+  	  )
+		)
+	)
+)
+
+========================
+Test Tags
+========================
+
+tests {
+  expect(res.status).to.equal(200);
+}
+
+---
+
+(source_file
+	tag: (tests
+		(keyword)
+    (textblock
+      (rawtext)
+    )
+	)
+)
+
