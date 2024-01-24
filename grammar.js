@@ -9,16 +9,16 @@ module.exports = grammar({
     source_file: $ =>
       repeat(
         choice(
-          field("meta", $.meta),
-          field("http", $.http),
-          field("query", $.query),
-          field("headers", $.headers),
-          field("auths", $.auths),
-          field("bodies", $.bodies),
-          field("varsandassert", $.varsandassert),
-          field("script", $.script),
-          field("tests", $.tests),
-          field("docs", $.docs),
+          $.meta,
+          $.http,
+          $.query,
+          $.headers,
+          $.auths,
+          $.bodies,
+          $.varsandassert,
+          $.script,
+          $.tests,
+          $.docs,
         ),
       ),
     meta: $ =>
