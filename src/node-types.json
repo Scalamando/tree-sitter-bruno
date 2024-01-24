@@ -597,52 +597,53 @@
   {
     "type": "source_file",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "auths",
-          "named": true
-        },
-        {
-          "type": "bodies",
-          "named": true
-        },
-        {
-          "type": "docs",
-          "named": true
-        },
-        {
-          "type": "headers",
-          "named": true
-        },
-        {
-          "type": "http",
-          "named": true
-        },
-        {
-          "type": "meta",
-          "named": true
-        },
-        {
-          "type": "query",
-          "named": true
-        },
-        {
-          "type": "script",
-          "named": true
-        },
-        {
-          "type": "tests",
-          "named": true
-        },
-        {
-          "type": "varsandassert",
-          "named": true
-        }
-      ]
+    "fields": {
+      "tag": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "auths",
+            "named": true
+          },
+          {
+            "type": "bodies",
+            "named": true
+          },
+          {
+            "type": "docs",
+            "named": true
+          },
+          {
+            "type": "headers",
+            "named": true
+          },
+          {
+            "type": "http",
+            "named": true
+          },
+          {
+            "type": "meta",
+            "named": true
+          },
+          {
+            "type": "query",
+            "named": true
+          },
+          {
+            "type": "script",
+            "named": true
+          },
+          {
+            "type": "tests",
+            "named": true
+          },
+          {
+            "type": "varsandassert",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {

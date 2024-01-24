@@ -9,18 +9,20 @@ module.exports = grammar({
   externals: $ => [$.rawtext],
 
   rules: {
-    source_file: $ => repeat(choice(
-      $.meta,
-      $.http,
-      $.query,
-      $.headers,
-      $.auths,
-      $.bodies,
-      $.varsandassert,
-      $.script,
-      $.tests,
-      $.docs,
-    )),
+    source_file: $ => repeat(field("tag",
+			choice(
+      	$.meta,
+      	$.http,
+      	$.query,
+      	$.headers,
+      	$.auths,
+      	$.bodies,
+      	$.varsandassert,
+      	$.script,
+      	$.tests,
+      	$.docs,
+			)
+		)),
 
     meta: $ => seq(
 			alias("meta", $.keyword),

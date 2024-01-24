@@ -4,49 +4,53 @@
     "source_file": {
       "type": "REPEAT",
       "content": {
-        "type": "CHOICE",
-        "members": [
-          {
-            "type": "SYMBOL",
-            "name": "meta"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "http"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "query"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "headers"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "auths"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "bodies"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "varsandassert"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "script"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "tests"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "docs"
-          }
-        ]
+        "type": "FIELD",
+        "name": "tag",
+        "content": {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "meta"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "http"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "query"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "headers"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "auths"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "bodies"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "varsandassert"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "script"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "tests"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "docs"
+            }
+          ]
+        }
       }
     },
     "meta": {
@@ -817,7 +821,7 @@
     },
     "value": {
       "type": "PATTERN",
-      "value": "[^\\s]+"
+      "value": "[^\\r\\n]+"
     }
   },
   "extras": [
