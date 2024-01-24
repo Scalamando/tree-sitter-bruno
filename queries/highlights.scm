@@ -6,13 +6,13 @@
 	"["
 	"]"
 ] @punctuation.bracket
+":" @punctuation.delimiter
 
 
 (key) @type
-(operator) @punctuation.delimiter
 [
   (value)
   (array_value)
-] @constant
+] @string
 
 (ERROR) @error

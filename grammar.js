@@ -199,7 +199,7 @@ module.exports = grammar({
 		),
     dictionary_pair: $ => seq(
 			$.key,
-			$.operator,
+			":",
 			$.value
 		),
 
@@ -210,13 +210,12 @@ module.exports = grammar({
     ),
     assert_dictionary_pair: $ => seq(
 			$.assert_key,
-			$.operator,
+			":",
 			$.value
 		),
     assert_key: _ => /[^\r\n:]+/,
 
     key: _ => /[^\s\r\n:]+/,
-    operator: _ => ":",
     value: _ => /[^\s]+/,
   },
 });
