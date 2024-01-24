@@ -467,6 +467,14 @@
       "members": [
         {
           "type": "SYMBOL",
+          "name": "vars"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "vars_secret"
+        },
+        {
+          "type": "SYMBOL",
           "name": "varsreq"
         },
         {
@@ -476,6 +484,42 @@
         {
           "type": "SYMBOL",
           "name": "assert"
+        }
+      ]
+    },
+    "vars": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "vars"
+          },
+          "named": true,
+          "value": "keyword"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dictionary"
+        }
+      ]
+    },
+    "vars_secret": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "vars:secret"
+          },
+          "named": true,
+          "value": "keyword"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "array"
         }
       ]
     },
@@ -642,6 +686,47 @@
           "value": "}"
         }
       ]
+    },
+    "array": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "["
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "array_value"
+              },
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": ","
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "]"
+        }
+      ]
+    },
+    "array_value": {
+      "type": "PATTERN",
+      "value": "[^\\r\\n\\s\\t\\[\\],]+"
     },
     "dictionary": {
       "type": "SEQ",

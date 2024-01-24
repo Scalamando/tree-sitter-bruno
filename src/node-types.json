@@ -1,5 +1,20 @@
 [
   {
+    "type": "array",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "array_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "assert",
     "named": true,
     "fields": {},
@@ -673,6 +688,44 @@
     }
   },
   {
+    "type": "vars",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "vars_secret",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "varsandassert",
     "named": true,
     "fields": {},
@@ -682,6 +735,14 @@
       "types": [
         {
           "type": "assert",
+          "named": true
+        },
+        {
+          "type": "vars",
+          "named": true
+        },
+        {
+          "type": "vars_secret",
           "named": true
         },
         {
@@ -732,6 +793,22 @@
         }
       ]
     }
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "array_value",
+    "named": true
   },
   {
     "type": "assert_key",

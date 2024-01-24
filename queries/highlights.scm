@@ -6,11 +6,16 @@
 [
 	"{"
 	"}"
+	"["
+	"]"
 ] @punctuation.bracket
 
-(operator) @punctuation.delimiter
 
 (key) @type
-(value) @constant
+(operator) @punctuation.delimiter
+[
+  (value)
+  (array_value)
+] @constant
 
 (ERROR) @error

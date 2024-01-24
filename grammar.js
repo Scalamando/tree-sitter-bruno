@@ -124,7 +124,21 @@ module.exports = grammar({
       $.dictionary,
     ),
 
-    varsandassert: $ => choice($.varsreq, $.varsres, $.assert),
+    varsandassert: $ => choice(
+			$.vars,
+			$.vars_secret,
+			$.varsreq,
+			$.varsres,
+			$.assert
+		),
+		vars: $ => seq(
+      alias("vars", $.keyword),
+      $.dictionary,
+		),
+		vars_secret: $ => seq(
+			alias("vars:secret", $.keyword),
+			$.array,
+		),
     varsreq: $ => seq(
       alias("vars:pre-request", $.keyword),
       $.dictionary,
@@ -164,6 +178,16 @@ module.exports = grammar({
 			optional($.rawtext),
 			"}"
 		),
+
+		array: $ => seq(
+			"[",
+			repeat(seq(
+				$.array_value,
+				optional(","),
+			)),
+			"]"
+		),
+		array_value: _ => /[^\r\n\s\t\[\],]+/,
 
     dictionary: $ => seq(
 			"{",
