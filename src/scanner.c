@@ -14,6 +14,11 @@ static void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
 
 bool tree_sitter_bruno_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
 	if(valid_symbols[RAW_TEXT]) {
+		
+		// Scanning raw text follows the rules of the official Bruno language grammar
+		// (refer to https://github.com/usebruno/bruno/blob/main/packages/bruno-lang/v2/src/bruToJson.js).
+		// A raw text block ends if a closing angle bracket is found right after a newline.
+		
 		lexer->result_symbol = RAW_TEXT;
 		for (bool has_content = false;; has_content = true) {
 			lexer->mark_end(lexer);
