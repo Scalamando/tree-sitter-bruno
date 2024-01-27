@@ -1,5 +1,7 @@
 # tree-sitter-bruno
 
+[![Tests](https://github.com/Scalamando/tree-sitter-bruno/actions/workflows/test.yaml/badge.svg)](https://github.com/Scalamando/tree-sitter-bruno/actions/workflows/test.yaml)
+
 [Bruno](https://github.com/usebruno/bruno) grammar for [tree-sitter](https://github.com/tree-sitter/tree-sitter).
 
 ## References
