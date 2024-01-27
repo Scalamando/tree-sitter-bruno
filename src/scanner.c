@@ -31,4 +31,6 @@ bool tree_sitter_bruno_external_scanner_scan(void *payload, TSLexer *lexer, cons
 			}
 		}
 	}
+
+	return false;
 }
