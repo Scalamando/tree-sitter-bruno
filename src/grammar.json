@@ -184,6 +184,10 @@
         {
           "type": "SYMBOL",
           "name": "authdigest"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "authoauth2"
         }
       ]
     },
@@ -249,6 +253,24 @@
           "content": {
             "type": "STRING",
             "value": "auth:digest"
+          },
+          "named": true,
+          "value": "keyword"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dictionary"
+        }
+      ]
+    },
+    "authoauth2": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "auth:oauth2"
           },
           "named": true,
           "value": "keyword"
@@ -841,4 +863,3 @@
   "inline": [],
   "supertypes": []
 }
-

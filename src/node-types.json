@@ -144,6 +144,25 @@
     }
   },
   {
+    "type": "authoauth2",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "dictionary",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "auths",
     "named": true,
     "fields": {},
@@ -165,6 +184,10 @@
         },
         {
           "type": "authdigest",
+          "named": true
+        },
+        {
+          "type": "authoauth2",
           "named": true
         }
       ]
