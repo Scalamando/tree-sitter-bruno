@@ -60,6 +60,7 @@ module.exports = grammar({
       $.authbasic,
       $.authbearer,
       $.authdigest,
+      $.authoauth2,
     ),
     authawsv4: $ => seq(
       alias("auth:awsv4", $.keyword),
@@ -75,6 +76,10 @@ module.exports = grammar({
     ),
     authdigest: $ => seq(
       alias("auth:digest", $.keyword),
+      $.dictionary,
+    ),
+    authoauth2: $ => seq(
+      alias("auth:oauth2", $.keyword),
       $.dictionary,
     ),
 
@@ -167,7 +172,7 @@ module.exports = grammar({
       alias("script:post-response", $.keyword),
       $.textblock,
     ),
-		
+
     tests: $ => seq(
 			alias("tests", $.keyword),
 			$.textblock

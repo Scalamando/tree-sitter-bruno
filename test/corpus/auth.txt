@@ -1,0 +1,28 @@
+===========
+Auth Oauth2
+===========
+
+auth:oauth2 {
+  grant_type: authorization_code
+  scope: read write
+}
+
+---
+
+(source_file
+  (auths
+    (authoauth2
+      (keyword)
+      (dictionary
+        (dictionary_pair
+          (key)
+          (value)
+        )
+        (dictionary_pair
+          (key)
+          (value)
+        )
+      )
+    )
+  )
+)

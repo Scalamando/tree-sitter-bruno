@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Bruno grammar for tree-sitter",
   "main": "bindings/node",
+  "types": "bindings/node",
   "scripts": {
     "generate": "tree-sitter generate",
     "parse": "tree-sitter parse",
@@ -14,7 +15,7 @@
     "url": "git+https://github.com/Scalamando/tree-sitter-bruno.git"
   },
   "keywords": [
-		"bruno",
+    "bruno",
     "tree-sitter",
     "parser"
   ],
@@ -46,7 +47,7 @@
   },
   "homepage": "https://github.com/Scalamando/tree-sitter-bruno#readme",
   "dependencies": {
-    "nan": "^2.18.0"
+    "node-addon-api": "^7.1.0"
   },
   "devDependencies": {
     "tree-sitter-cli": "^0.20.8"
