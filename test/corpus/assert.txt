@@ -1,0 +1,47 @@
+=======================
+Assert res.status = 200
+=======================
+
+assert {
+  res.status: eq 200
+}
+
+---
+
+(source_file
+  (varsandassert
+    (assert
+      (keyword)
+      (assert_dictionary
+        (assert_dictionary_pair
+          (assert_key)
+          (value)
+        )
+      )
+    )
+  )
+)
+
+=======================
+Assert with empty value
+=======================
+
+assert {
+  res.status:
+}
+
+---
+
+(source_file
+  (varsandassert
+    (assert
+      (keyword)
+      (assert_dictionary
+        (assert_dictionary_pair
+          (assert_key)
+          (value)
+        )
+      )
+    )
+  )
+)

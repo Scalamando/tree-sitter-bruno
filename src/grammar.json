@@ -843,7 +843,7 @@
     },
     "value": {
       "type": "PATTERN",
-      "value": "[^\\r\\n]+"
+      "value": "[^\\r\\n]*"
     }
   },
   "extras": [

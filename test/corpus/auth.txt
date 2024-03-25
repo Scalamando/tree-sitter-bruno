@@ -26,3 +26,32 @@ auth:oauth2 {
     )
   )
 )
+
+===========================================
+Auth Basic with empty username and password
+===========================================
+
+auth:basic {
+  username:
+  password:
+}
+
+---
+
+(source_file
+  (auths
+    (authbasic
+      (keyword)
+      (dictionary
+        (dictionary_pair
+          (key)
+          (value)
+        )
+        (dictionary_pair
+          (key)
+          (value)
+        )
+      )
+    )
+  )
+)
